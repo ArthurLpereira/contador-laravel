@@ -25,4 +25,8 @@ class ContadorController extends Controller
     public function retorna_estoque(){
         return view('screens.estoque');
     }
+
+    public function retorna_cadastro(){
+        return view('screens.cadastro');
+    }
 }

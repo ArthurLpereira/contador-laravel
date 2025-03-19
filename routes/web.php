@@ -22,6 +22,9 @@ Route::get('/contagens',[ContadorController::class,'retorna_contagens'])->name('
 // Chamar estoque
 Route::get('/estoque',[ContadorController::class, 'retorna_estoque'])->name('estoque');
 
+Route::get('/cadastro',[ContadorController::class,'retorna_cadastro'])->name('cadastro');
+
+
 
 
 
