@@ -9,6 +9,7 @@
     <title>Document</title>
 </head>
 <body>
+<main>
 <section id="section_form">
         <div id="logo_formulario">
             <img src="{{ asset('assets/DevTheBlaze.png')}}" alt="">
@@ -32,5 +33,6 @@
             <a href="">Cadastre-se</a>
         </form>
     </section>
+</main>
 </body>
 </html>

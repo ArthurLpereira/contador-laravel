@@ -10,11 +10,7 @@
 </head>
 <body>
     <header> 
-        <div>
-            <figure>
-                <img src="{{ asset('assets/fig_top.png')}}" alt="Figura topo" id="figura_top">
-            </figure>
-        </div>
+        <div id="fig_top"></div>
     </header>
 </body>
 </html>

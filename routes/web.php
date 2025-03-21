@@ -24,6 +24,9 @@ Route::get('/estoque',[ContadorController::class, 'retorna_estoque'])->name('est
 
 Route::get('/cadastro',[ContadorController::class,'retorna_cadastro'])->name('cadastro');
 
+Route::view('/header','template.footer' );
+
+
 
 
 

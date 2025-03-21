@@ -10,11 +10,7 @@
 </head>
 <body>
 <footer>
-    <div>
-        <figure>
-            <img src="{{asset('assets/fig_footer.png')}}" alt="figura bottom" id="fig_bottom">
-        </figure>
-    </div>
+    <div id="fig_bottom"></div>
 </footer>
 </body>
 </html>
