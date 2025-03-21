@@ -4,7 +4,7 @@ html,
 body {
     margin: 0;
     padding: 0;
-    /* overflow: hidden; */
+    overflow: hidden;
     background-color: #FFEEDA;
     width: 100%;
     height: 100%;
@@ -27,7 +27,7 @@ header {
 footer{
     display: flex;
     align-items: end;
-    justify-content: start;
+    justify-content: space-between;
     max-height: 5vh;
 }
 #fig_bottom {
@@ -35,6 +35,12 @@ footer{
     height: 250px;
     background: linear-gradient(to right, #c40000, #ff5733);
     clip-path: polygon(0% 0%, 40% 70%, 100% 100%, 0% 100%, 0% 100%);
+}
+#losangos{
+    width: 400px;
+    position: relative;
+    left: 10vw;
+    top: 3vh;
 }
 main{
     display: flex;
@@ -109,7 +115,7 @@ form button:hover{
 form a{
     color: red;
     position: relative;
-    bottom: 35px;
+    bottom: 50px;
     right: 50%;
 }
 #logo_formulario {
@@ -133,5 +139,87 @@ form a{
     position: relative;
     border: 1px solid red;
     border-radius: 100%;
-    padding: 5px;
+    padding: 10px;
 } 
+#background_calendar{
+    background-color: #f1f5f9;
+    border-radius: 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 80%;
+}
+.calendar-container {
+    text-align: center;
+    width: 450px;
+    margin: 0 auto;
+    position: relative;
+    height: auto;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#month-year {
+    margin: 0 15px;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #DF7200;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 8px;
+    position: relative;
+    right: 100px;
+}
+
+th {
+    background-color: #FF5733;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    color: white;
+}
+td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.2em;
+    border-radius: 10px;
+}
+
+td:hover {
+    background-color: #D0E8F2;
+}
+
+td.selected {
+    background-color:#D71D11;
+    color: white;
+}
+
+.selected-day {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+}
+#btn_confirmar_dia button{
+    width: 15vw;
+    height: 5vh;
+    background-color: #811a1a;
+    color: white;
+    font-size: 18px;
+    border: none;
+}

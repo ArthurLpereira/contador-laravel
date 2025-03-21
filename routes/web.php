@@ -10,6 +10,9 @@ Route::get('/', function () {
 // Chamar Login
 Route::get('/login',[ContadorController::class,'retorna_login'])->name('login');
 
+// Chamar Cadastro
+Route::get('/cadastro',[ContadorController::class,'retorna_cadastro'])->name('cadastro');
+
 // Chamar Calendario
 Route::get('/calendario',[ContadorController::class,'retorna_calendario'])->name('calendario');
 
@@ -22,9 +25,7 @@ Route::get('/contagens',[ContadorController::class,'retorna_contagens'])->name('
 // Chamar estoque
 Route::get('/estoque',[ContadorController::class, 'retorna_estoque'])->name('estoque');
 
-Route::get('/cadastro',[ContadorController::class,'retorna_cadastro'])->name('cadastro');
-
-Route::view('/header','template.footer' );
+Route::view('/footer','template.footer');
 
 
 

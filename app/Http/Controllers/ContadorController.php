@@ -6,11 +6,16 @@ use Illuminate\Http\Request;
 
 class ContadorController extends Controller
 {
-    public function retorna_login(){
-        return view('screens.login');
+    public function retorna_login()
+    {
+        return view('screens.login', ['tipo' => 'login']);
     }
 
-    public function retorina_calendario(){
+    public function retorna_cadastro()
+    {
+        return view('screens.cadastro', ['tipo' => 'cadastro']);
+    }
+    public function retorna_calendario(){
         return view('screens.calendario');
     }
 
@@ -26,7 +31,4 @@ class ContadorController extends Controller
         return view('screens.estoque');
     }
 
-    public function retorna_cadastro(){
-        return view('screens.cadastro');
-    }
 }

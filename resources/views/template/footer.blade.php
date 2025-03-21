@@ -11,6 +11,7 @@
 <body>
 <footer>
     <div id="fig_bottom"></div>
+    <img src="{{asset('assets/losangos_bottom.png')}}" alt="" id="losangos">
 </footer>
 </body>
 </html>
