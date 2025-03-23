@@ -15,20 +15,28 @@ class ContadorController extends Controller
     {
         return view('screens.cadastro', ['tipo' => 'cadastro']);
     }
-    public function retorna_calendario(){
+    public function retorna_calendario()
+    {
         return view('screens.calendario');
     }
 
-    public function retorna_categorias(){
-        return view('screens.categorias');
+    public function retorna_categorias()
+    {
+        return view('screens.categorias', ['tipo' => 'contagem_categorias']);
     }
 
-    public function retorna_contagens(){
+    public function retorna_contagens()
+    {
         return view('screens.contagens');
     }
 
-    public function retorna_estoque(){
+    public function retorna_estoque()
+    {
         return view('screens.estoque');
     }
 
+    public function retorna_relatorio()
+    {
+        return view('screens.relatorio', ['tipo' => 'contagem_relatorio']);
+    }
 }

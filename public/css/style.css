@@ -24,25 +24,29 @@ header {
     background: linear-gradient(to right, #c40000, #ff5733);
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 60% 40%, 0% 0%);
 }
-footer{
+
+footer {
     display: flex;
     align-items: end;
     justify-content: space-between;
     max-height: 5vh;
 }
+
 #fig_bottom {
     width: 800px;
     height: 250px;
     background: linear-gradient(to right, #c40000, #ff5733);
     clip-path: polygon(0% 0%, 40% 70%, 100% 100%, 0% 100%, 0% 100%);
 }
-#losangos{
+
+#losangos {
     width: 400px;
     position: relative;
     left: 10vw;
     top: 3vh;
 }
-main{
+
+main {
     width: 100%;
     height: 90vh;
     display: flex;
@@ -50,7 +54,8 @@ main{
     justify-content: center;
     flex-direction: column;
 }
-#section_form{
+
+#section_form {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,13 +65,15 @@ main{
     height: 60%;
     border-radius: 50px;
 }
-#section_form h1{
+
+#section_form h1 {
     font-size: 40px;
     position: relative;
     bottom: 55px;
     text-transform: uppercase;
 }
-form{
+
+form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,6 +82,7 @@ form{
     position: relative;
     bottom: 55px;
 }
+
 .input-container {
     position: relative;
     display: flex;
@@ -98,7 +106,7 @@ form{
     font-size: 20px;
 }
 
-form button{
+form button {
     width: 35%;
     height: 45px;
     background: linear-gradient(to right, #C31818, #F37430);
@@ -108,17 +116,19 @@ form button{
     border-radius: 5px;
 }
 
-form button:hover{
+form button:hover {
     cursor: pointer;
-    transform: scale(1.1);
+    transform: scale(1.03);
     transition-duration: 0.5s
 }
-form a{
+
+form a {
     color: red;
     position: relative;
     bottom: 50px;
     right: 50%;
 }
+
 #logo_formulario {
     background-color: rgb(255, 255, 255);
     border-radius: 50%;
@@ -141,8 +151,9 @@ form a{
     border: 1px solid red;
     border-radius: 100%;
     padding: 10px;
-} 
-#background_calendar{
+}
+
+#background_calendar {
     background-color: #f1f5f9;
     border-radius: 7%;
     display: flex;
@@ -154,6 +165,7 @@ form a{
     box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
     z-index: 2;
 }
+
 .calendar-container {
     text-align: center;
     width: 450px;
@@ -193,6 +205,7 @@ th {
     border-radius: 10px;
     color: white;
 }
+
 td {
     padding: 15px;
     text-align: center;
@@ -208,7 +221,7 @@ td:hover {
 }
 
 td.selected {
-    background-color:#D71D11;
+    background-color: #D71D11;
     color: white;
 }
 
@@ -220,7 +233,8 @@ td.selected {
     position: relative;
     bottom: 15px;
 }
-#btn_confirmar_dia button{
+
+#btn_confirmar_dia button {
     width: 15vw;
     height: 5vh;
     background-color: #811a1a;
@@ -230,60 +244,82 @@ td.selected {
     position: relative;
     top: 30px;
 }
-nav{
+
+nav {
     position: absolute;
-    top: 100px;
+    top: 70px;
     width: 250px;
     margin-left: 20px;
     display: flex;
 }
-nav ul li:hover{
+
+nav ul li:hover {
     text-decoration: underline;
     color: white;
 }
-.menu{
+
+.menu {
     position: fixed;
     top: 0;
     left: -350px;
     width: 250px;
     height: 50%;
-    background-color: #000;
+    background: linear-gradient(to bottom, red, orange);
     transition: left 0.5s ease;
 }
 
-.menu.ativo{
+.menu.ativo {
     left: 0;
 }
 
-.menu ul li a{
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu ul li {
+    list-style-type: none;
+}
+
+.menu ul li a {
     color: white;
-    text-transform: uppercase;
+    text-transform: capitalize;
     list-style: none;
     margin-top: 10px;
     cursor: pointer;
     text-decoration: none;
+    cursor: pointer;
+    padding: 10px;
 }
-.hamburguer,.barra{
+
+.hamburguer,
+.barra {
     position: fixed;
 }
-.hamburguer{
+
+.hamburguer {
     display: block;
     border: none;
-    background-color: black;
+    background-color: red;
     cursor: pointer;
 }
-.hamburguer.aberto #barra1{
+
+.hamburguer.aberto #barra1 {
     background-color: white;
     transform: rotate(45deg) translate(6px, 8px);
 }
-.hamburguer.aberto #barra2{
+
+.hamburguer.aberto #barra2 {
     background-color: transparent;
 }
-.hamburguer.aberto #barra3{
+
+.hamburguer.aberto #barra3 {
     background-color: white;
     transform: rotate(-45deg) translate(6px, -8px);
 }
-.barra{
+
+.barra {
     top: 30px;
     left: 30px;
     background-color: black;
@@ -292,9 +328,68 @@ nav ul li:hover{
     border-radius: 50px;
     transition: all 0.3s ease;
 }
-#barra2{
+
+#barra2 {
     top: 40px;
 }
-#barra3{
+
+#barra3 {
     top: 50px;
+}
+
+#sessao_estoque form label {
+    font-size: 20px;
+}
+
+#sessao_estoque form input {
+    width: 45vw;
+    height: 8vh;
+}
+
+#sessao_estoque form button {
+    width: 30%;
+    height: 40px;
+}
+
+#conjunto-categorias {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 70%;
+    border-radius: 20px;
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+#conjunto-categorias h1 {
+    font-size: 30px;
+}
+
+#btns-categorias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.btn_contagens {
+    width: 80%;
+    height: 13%;
+    background-color: #811A1A;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn_contagens:hover {
+    transform: scale(1.03);
+    transition-duration: 0.5s;
+    background-color: #6d1313;
 }

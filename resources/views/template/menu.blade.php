@@ -10,13 +10,11 @@
 
 <body>
     <div class="menu">
-        <div id="background-menu">
             <button class="hamburguer">
                 <div id="barra1" class="barra"></div>
                 <div id="barra2" class="barra"></div>
                 <div id="barra3" class="barra"></div>
             </button>
-        </div>
 
 
         <nav>
