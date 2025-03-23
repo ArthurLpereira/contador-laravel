@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <title>Calendário</title>
 </head>
-
 <body>
     <main>
+        @include('template.menu')
         <section id="background_calendar">
             <div class="calendar-container">
                 <div class="calendar-header">
@@ -35,9 +35,10 @@
             </div>
             <div class="selected-day" id="selected-day">Nenhum dia selecionado</div>
         </section>
-        <div id="btn_confirmar_dia"><button>
-        Concluido
-    </button></div>
+
+        <div id="btn_confirmar_dia">
+            <button>Concluido</button>
+        </div>
     </main>
     <script src="{{asset('js/script.js')}}"></script>
 </body>

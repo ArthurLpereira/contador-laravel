@@ -43,11 +43,12 @@ footer{
     top: 3vh;
 }
 main{
+    width: 100%;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 90vh;
+    flex-direction: column;
 }
 #section_form{
     display: flex;
@@ -150,6 +151,8 @@ form a{
     justify-content: center;
     width: 50%;
     height: 80%;
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+    z-index: 2;
 }
 .calendar-container {
     text-align: center;
@@ -214,6 +217,8 @@ td.selected {
     font-size: 1.2em;
     color: #333;
     text-align: center;
+    position: relative;
+    bottom: 15px;
 }
 #btn_confirmar_dia button{
     width: 15vw;
@@ -222,4 +227,74 @@ td.selected {
     color: white;
     font-size: 18px;
     border: none;
+    position: relative;
+    top: 30px;
+}
+nav{
+    position: absolute;
+    top: 100px;
+    width: 250px;
+    margin-left: 20px;
+    display: flex;
+}
+nav ul li:hover{
+    text-decoration: underline;
+    color: white;
+}
+.menu{
+    position: fixed;
+    top: 0;
+    left: -350px;
+    width: 250px;
+    height: 50%;
+    background-color: #000;
+    transition: left 0.5s ease;
+}
+
+.menu.ativo{
+    left: 0;
+}
+
+.menu ul li a{
+    color: white;
+    text-transform: uppercase;
+    list-style: none;
+    margin-top: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.hamburguer,.barra{
+    position: fixed;
+}
+.hamburguer{
+    display: block;
+    border: none;
+    background-color: black;
+    cursor: pointer;
+}
+.hamburguer.aberto #barra1{
+    background-color: white;
+    transform: rotate(45deg) translate(6px, 8px);
+}
+.hamburguer.aberto #barra2{
+    background-color: transparent;
+}
+.hamburguer.aberto #barra3{
+    background-color: white;
+    transform: rotate(-45deg) translate(6px, -8px);
+}
+.barra{
+    top: 30px;
+    left: 30px;
+    background-color: black;
+    width: 35px;
+    height: 5px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+#barra2{
+    top: 40px;
+}
+#barra3{
+    top: 50px;
 }

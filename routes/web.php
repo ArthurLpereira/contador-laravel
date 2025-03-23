@@ -25,7 +25,7 @@ Route::get('/contagens',[ContadorController::class,'retorna_contagens'])->name('
 // Chamar estoque
 Route::get('/estoque',[ContadorController::class, 'retorna_estoque'])->name('estoque');
 
-Route::view('/footer','template.footer');
+Route::view('/menu','template.menu');
 
 
 
