@@ -26,3 +26,11 @@ Route::get('/contagens', [ContadorController::class, 'retorna_contagens'])->name
 Route::get('/estoque', [ContadorController::class, 'retorna_estoque'])->name('estoque');
 
 Route::get('/relatorio', [ContadorController::class, 'retorna_relatorio'])->name('relatorio');
+
+Route::prefix('contador')->group(function(){
+    Route::get('/login', [ContadorController::class, 'retorna_login'])->name('contador-login');
+});
+
+Route::fallback(function(){
+    return view('screens.fallback');
+});
