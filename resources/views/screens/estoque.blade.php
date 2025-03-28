@@ -1,6 +1,3 @@
-@extends('layouts.app')
-@include ('template.header')
-@include ('template.menu')
 <!DOCTYPE html>
 <html lang="en">
 

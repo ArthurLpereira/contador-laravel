@@ -26,7 +26,7 @@
                     <a href="{{route('calendario')}}" >Calendario</a>
                 </li>
                 <li>
-                    <a href="{{route('contagens')}}">Contagem</a>
+                    <a href="{{route('categorias')}}">Contagem</a>
                 </li>
                 <li><a href="{{route('login')}}">Sair</a></li>
             </ul>
