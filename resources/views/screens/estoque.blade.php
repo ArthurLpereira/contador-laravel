@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    @include('template.header')
     <main>
         <section id="sessao_estoque">
             <form action="" method="">

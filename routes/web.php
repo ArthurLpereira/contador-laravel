@@ -3,15 +3,16 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContadorController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+//Rotas sobre Cadastro
+Route::get('/cadastro', [ContadorController::class, 'retorna_cadastro'])->name('cadastro');
+Route::post('/cadastro', [ContadorController::class, 'cadastro_store'])->name('cadastro-store');
 
 // Chamar Login
-Route::get('/login', [ContadorController::class, 'retorna_login'])->name('login');
-
-// Chamar Cadastro
-Route::get('/cadastro', [ContadorController::class, 'retorna_cadastro'])->name('cadastro');
+Route::get('/', [ContadorController::class, 'retorna_login'])->name('login');
 
 // Chamar Calendario
 Route::get('/calendario', [ContadorController::class, 'retorna_calendario'])->name('calendario');
@@ -27,10 +28,10 @@ Route::get('/estoque', [ContadorController::class, 'retorna_estoque'])->name('es
 
 Route::get('/relatorio', [ContadorController::class, 'retorna_relatorio'])->name('relatorio');
 
-Route::prefix('contador')->group(function(){
-    Route::get('/login', [ContadorController::class, 'retorna_login'])->name('contador-login');
-});
+// Route::prefix('contador')->group(function(){
+//     Route::get('/login', [ContadorController::class, 'retorna_login'])->name('contador-login');
+// });
 
-Route::fallback(function(){
+Route::fallback(function () {
     return view('screens.fallback');
 });
