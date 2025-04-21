@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\ContadorModel;
 
 class ContadorController extends Controller
 {
@@ -64,5 +66,39 @@ class ContadorController extends Controller
     public function retorna_relatorio()
     {
         return view('screens.relatorio', ['tipo' => 'contagem_relatorio']);
+    }
+
+    public function autenticar(Request $request)
+    {
+        // Validação básica
+        $request->validate([
+            'txtlogin' => 'required|string',
+            'txtsenha' => 'required|string',
+        ]);
+
+        $credenciais = [
+            'nome_usuario' => $request->txtlogin,
+            'password' => $request->txtsenha
+        ];
+
+        // Tentativa de login
+        if (Auth::attempt($credenciais)) {
+            $request->session()->regenerate();
+            return redirect()->route('painel');
+        }
+
+        return back()->withErrors([
+            'txtlogin' => 'Login ou senha inválidos',
+        ]);
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect()->route('login');
     }
 }

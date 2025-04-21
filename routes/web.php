@@ -35,3 +35,12 @@ Route::get('/relatorio', [ContadorController::class, 'retorna_relatorio'])->name
 Route::fallback(function () {
     return view('screens.fallback');
 });
+
+
+Route::post('/login', [ContadorController::class, 'autenticar'])->name('login-store');
+Route::get('/logout', [ContadorController::class, 'logout'])->name('logout');
+
+// Exemplo de rota protegida (só acessa se estiver logado)
+Route::get('/painel', function () {
+    return view('painel');
+})->middleware('auth')->name('painel');

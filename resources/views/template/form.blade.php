@@ -21,7 +21,7 @@
             <div>
                 <h1>{{ $tipo == 'login' ? 'Login' : 'Cadastro' }}</h1>
             </div>
-            <form action="{{ $tipo == 'login' ? route('login') : route('cadastro') }}" method="POST">
+            <form action="{{ $tipo == 'login' ? route('login-store') : route('cadastro') }}" method="POST">
                 @csrf
                 <div class="input-container">
                     <i class="fa-solid fa-user"></i>
